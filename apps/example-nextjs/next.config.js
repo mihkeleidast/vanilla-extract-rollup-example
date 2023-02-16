@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
-const withVanillaExtract = createVanillaExtractPlugin();
+const withVanillaExtract = createVanillaExtractPlugin({ esbuildOptions: { loader: { '.css': 'empty' } } });
 const withPlugins = require('next-compose-plugins');
 const withTM = require('next-transpile-modules')(['@vanilla-extract-rollup-example/ui']);
 
